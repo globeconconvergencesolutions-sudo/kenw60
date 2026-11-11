@@ -1,0 +1,14 @@
+KENW60 SMTP SETTINGS (examples only; NEVER add real passwords here)
+
+Gmail local test:
+  Host: smtp.gmail.com
+  Port: 465
+  Username: sending-address@gmail.com
+  Password: Google App Password (NOT the regular Google login password)
+  From: sending-address@gmail.com
+  Website URL: leave blank only for same-computer localhost testing
+
+For the deployed website, set the Website URL to the actual HTTPS domain.
+Recommended for production: configure SMTP_HOST, SMTP_PORT, SMTP_USER,
+SMTP_PASS, MAIL_FROM, SITE_URL as environment variables in the server host.
+Do not share the project's data/.smtp-password or any .env files.

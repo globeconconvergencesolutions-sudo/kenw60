@@ -1,0 +1,23 @@
+{
+  "name": "kenw60-project-hub",
+  "version": "1.0.0",
+  "description": "PLEAD II / KENW60 Project Hub - members portal for documents, audio, video and event content",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "reset-admin": "node server.js --reset-admin",
+    "test": "node --test --test-concurrency=1 test/hub.test.js"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mammoth": "^1.8.0",
+    "multer": "^2.5.0",
+    "nodemailer": "^10.4.0",
+    "sanitize-html": "^2.18.1"
+  }
+}
