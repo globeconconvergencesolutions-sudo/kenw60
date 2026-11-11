@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KENW60 Project Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Login -->
+  <section id="login" class="login hidden">
+    <div class="login-wrap">
+      <div class="login-left">
+        <div class="logo-strip">
+          <img src="/img/kps.jpg" alt="Kenya Prisons Service" class="logo-kps">
+          <img src="/img/unodc.png" alt="United Nations Office on Drugs and Crime" class="logo-unodc">
+        </div>
+        <div class="eyebrow">PLEAD II &nbsp;·&nbsp; Project KENW60</div>
+        <h1 class="login-title">KENW60 Project Hub</h1>
+        <p class="login-sub">Shared workspace for the operationalization of the KPS Digital Learning Centre and National Partner Data Centre, with advisory support for Model Witness Rooms and Rescue Centres.</p>
+
+        <div class="login-panel" id="authPanel">
+          <form id="loginForm">
+            <h2>Sign in</h2>
+            <p class="panel-sub">Use the email and password given to you by the project administrator.</p>
+            <p id="loginOk" class="ok-msg hidden"></p>
+            <label>Email address
+              <input name="email" id="loginEmail" type="email" required autocomplete="username" placeholder="name@organisation.org">
+            </label>
+            <label><span class="label-row">Password <a class="link-lime" id="forgotLink">Forgot password?</a></span>
+              <span class="pw-wrap">
+                <input name="password" id="pwInput" type="password" required autocomplete="current-password" placeholder="••••••••">
+                <button type="button" class="pw-toggle" id="pwToggle" aria-label="Show password">Show</button>
+              </span>
+            </label>
+            <button class="btn-login">Sign in</button>
+            <p id="loginErr" class="error"></p>
+          </form>
+
+          <form id="forgotForm" class="hidden">
+            <h2>Reset your password</h2>
+            <p class="panel-sub">Enter the email you sign in with. We'll email you a secure link to set a new password.</p>
+            <label>Email address
+              <input name="email" id="forgotEmail" type="email" required autocomplete="email" placeholder="name@organisation.org">
+            </label>
+            <button class="btn-login">Send reset link</button>
+            <p id="forgotErr" class="error"></p>
+            <p id="forgotOk" class="ok-msg hidden"></p>
+            <p class="panel-foot"><a class="link-lime back-link">← Back to sign in</a></p>
+          </form>
+
+          <form id="resetForm" class="hidden">
+            <h2>Set a new password</h2>
+            <p class="panel-sub" id="resetFor">Checking your link…</p>
+            <div id="resetFields">
+              <label>New password
+                <input name="password" type="password" minlength="8" required autocomplete="new-password" placeholder="At least 8 characters">
+              </label>
+              <label>Confirm new password
+                <input name="confirm" type="password" minlength="8" required autocomplete="new-password" placeholder="Type it again">
+              </label>
+              <button class="btn-login">Save new password</button>
+            </div>
+            <p id="resetErr" class="error"></p>
+            <p class="panel-foot"><a class="link-lime back-link">← Back to sign in</a></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="login-right">
+        <div class="fac"><span class="fac-ico"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+          <div><b>PSTC Digital Learning Centre</b><span>Ruiru</span></div></div>
+        <div class="fac"><span class="fac-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></span>
+          <div><b>National Partner ICT Data Centre</b><span>Nairobi</span></div></div>
+        <div class="fac"><span class="fac-ico"><svg viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span>
+          <div><b>Model Witness Rooms</b><span>Nakuru · Kisumu</span></div></div>
+        <div class="fac"><span class="fac-ico"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="12" cy="12" r="2"/><path d="M8.5 19a3.5 3.5 0 0 1 7 0"/></svg></span>
+          <div><b>Rescue Centres</b><span>Kiambu · Embu · Kisumu</span></div></div>
+        <div class="fac"><span class="fac-ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></span>
+          <div><b>Witness Room Installation Advisory</b><span>Nairobi</span></div></div>
+      </div>
+    </div>
+    <footer class="login-footer">Programme for Legal Empowerment and Aid Delivery, Phase II &nbsp;·&nbsp; Hosted by GlobeCon Convergence Solutions</footer>
+  </section>
+
+  <!-- App shell -->
+  <div id="shell" class="shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/"><span class="brand-crest"><img src="/img/kps.jpg" alt=""></span><span>KENW60 Hub<small>PLEAD II · UNODC</small></span></a>
+      <nav>
+        <a href="#/" data-nav="home">Dashboard</a>
+        <a href="#/media" data-nav="media">Media library</a>
+        <a href="#/events" data-nav="events">Events</a>
+        <div class="nav-label">Facilities &amp; workstreams</div>
+        <div id="spaceNav"></div>
+        <div class="nav-label admin-only">Administration</div>
+        <a href="#/members" data-nav="members" class="admin-only">Members</a>
+        <a href="#/settings" data-nav="settings" class="admin-only">Email settings</a>
+      </nav>
+      <div class="me" id="meBox"></div>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <button class="btn icon menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+        <form id="searchForm" class="search"><input id="searchInput" placeholder="Search files, pages, events…"></form>
+        <div class="top-actions">
+          <button class="btn editor-only" data-act="new-event">+ Event</button>
+          <button class="btn editor-only" data-act="new-page">+ Page</button>
+          <button class="btn primary upload-only" data-act="upload">Upload</button>
+        </div>
+      </header>
+      <main id="view" class="view"></main>
+    </div>
+  </div>
+
+  <div id="modal" class="modal hidden"><div class="modal-card" id="modalCard"></div></div>
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
